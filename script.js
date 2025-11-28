@@ -28,7 +28,13 @@ document.getElementById("nao").addEventListener("click", function() {
   this.textContent = "Sai fora irmão, clica no SIM logo!";
 });
 
-// Quando o "Sim" for clicado, redireciona para a página de agradecimento
+// Quando o "Sim" for clicado, redireciona para o WhatsApp com a resposta
 document.getElementById("sim").addEventListener("click", function() {
-  window.location.href = "agradecimento.html"; // Redireciona para a página de agradecimento
+  // Defina a URL do seu WhatsApp com a mensagem
+  const numeroWhatsapp = "+5545998495673";  // Substitua "SEUNUMERO" pelo seu número do WhatsApp
+  const mensagem = encodeURIComponent("Oi xuxu, você quer ir comigo na confraternização da minha empresa? SIM"); // A resposta
+  const linkWhatsapp = `https://wa.me/${numeroWhatsapp}?text=${mensagem}`;
+
+  // Redireciona para o WhatsApp
+  window.open(linkWhatsapp, "_blank");
 });
