@@ -19,10 +19,15 @@ document.getElementById("nao").addEventListener("mouseover", function() {
   this.fugindo = setInterval(moverNao, 100); // O movimento acontece a cada 100ms
 });
 
-// Quando o "Não" for clicado, ele muda a frase e para de fugir
+// Quando o "Não" for clicado, ele muda a frase e fica impossível de clicar
 document.getElementById("nao").addEventListener("click", function() {
   clearInterval(this.fugindo); // Para o movimento de fuga
   this.disabled = true; // Desabilita o botão
+  this.style.pointerEvents = "none"; // Impede qualquer clique futuro
+
+  // Torna o botão invisível ou "desaparecido"
+  this.style.opacity = 0;
+  this.style.visibility = "hidden"; // Deixa o botão invisível
 
   // Altera o texto do botão "Não"
   this.textContent = "Sai fora irmão, clica no SIM logo!";
