@@ -40,7 +40,8 @@ document.getElementById("sim").addEventListener("click", function() {
     document.body.innerHTML = `
       <div class="container">
         <h1 class="titulo">Ufa ainda bem que tu aceitou 💋</h1>
-        <p class="mensagem">Aguarde que logo nos vamos comer pizza de shawarma</p>
+        <p class="mensagem">Aguarde que logo nos vamos comer pizza de shawarma e batata <p>
+        <p>na casa da Kelyn (obs: ela me obrigou a escrever isso)</p>
         <a href="#" class="voltar">Voltar para a página inicial</a>
       </div>
     `;
