@@ -52,7 +52,7 @@ function gerarCoracoes() {
   for (let i = 0; i < 50; i++) {
     let coracao = document.createElement("span");
     coracao.classList.add("coracao");
-    coracao.textContent = "💖"; // Emoji do coração
+    coracao.textContent = "🤍"; // Emoji do coração
 
     // Posições aleatórias para os corações
     coracao.style.left = Math.random() * window.innerWidth + "px";
