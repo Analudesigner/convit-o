@@ -46,20 +46,20 @@ document.getElementById("sim").addEventListener("click", function() {
       </div>
     `;
     
-    // Ação ao clicar no botão "Voltar"
-    document.querySelector(".voltar").addEventListener("click", function() {
-      // Recarrega a página, retornando à tela inicial
-      location.reload(); // Ou, você pode usar: window.location.href = 'index.html'; para reiniciar a página
-    });
-  }, 1000); // Espera 1 segundo para mostrar a página de agradecimento
+// Ação ao clicar no botão "Voltar"
+document.getElementById("voltar").addEventListener("click", function() {
+  // Volta para a página inicial
+  document.getElementById("pagina-agradecimento").classList.add("escondido");
+  document.getElementById("pagina-inicial").classList.remove("escondido");
 });
+
 
 // Função para gerar corações brancos que sobem pela tela
 function gerarCoracoes() {
   for (let i = 0; i < 50; i++) {
     let coracao = document.createElement("span");
     coracao.classList.add("coracao");
-    coracao.textContent = "💖"; // Emoji do coração
+    coracao.textContent = "🤍"; // Emoji do coração
 
     // Posições aleatórias para os corações
     coracao.style.left = Math.random() * window.innerWidth + "px";
