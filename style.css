@@ -144,7 +144,7 @@ body {
   padding: 12px 30px;
   font-size: 1.3em;
   color: #FF3CAC;
-  margin: 20px;
+  margin-top: 40px; /* Mais espaço entre o texto e o botão */
   cursor: pointer;
   border-radius: 15px;
   transition: all 0.3s ease;
@@ -154,4 +154,4 @@ body {
 .voltar:hover {
   background-color: #FF3CAC;
   color: white;
-} 
+}
