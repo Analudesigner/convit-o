@@ -27,7 +27,7 @@ document.getElementById("nao").addEventListener("click", function() {
 
   // Torna o botão invisível ou "desaparecido"
   this.style.opacity = 0;
-  this.style.visibility = "hidden"; // Deixa o botão invisível
+  this.style.visibility = "hidden";
 
   // Altera o texto do botão "Não"
   this.textContent = "Sai fora irmão, clica no SIM logo!";
