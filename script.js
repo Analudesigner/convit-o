@@ -41,9 +41,15 @@ document.getElementById("sim").addEventListener("click", function() {
       <div class="container">
         <h1 class="titulo">Ufa ainda bem que tu aceitou 💋</h1>
         <p class="mensagem">Aguarde que logo nos vamos comer pizza de shawarma</p>
-        <a href="/" class="voltar">Voltar para a página inicial</a>
+        <a href="#" class="voltar">Voltar para a página inicial</a>
       </div>
     `;
+    
+    // Ação ao clicar no botão "Voltar"
+    document.querySelector(".voltar").addEventListener("click", function() {
+      // Recarrega a página, retornando à tela inicial
+      location.reload(); // Ou, você pode usar: window.location.href = 'index.html'; para reiniciar a página
+    });
   }, 1000); // Espera 1 segundo para mostrar a página de agradecimento
 });
 
