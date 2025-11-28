@@ -79,7 +79,7 @@ body {
   100% { transform: translate(-10px, -10px); }
 }
 
-/* Estilo para os corações */
+/* Estilo para os corações (eles devem ser brancos) */
 .coracoes {
   position: absolute;
   top: 0;
@@ -92,6 +92,7 @@ body {
 .coracao {
   position: absolute;
   font-size: 40px;
+  color: white; /* Cor branca para os corações */
   opacity: 0.9;
   animation: subir 5s infinite ease-in-out;
 }
@@ -108,4 +109,24 @@ body {
     transform: translateY(-100vh);
     opacity: 0;
   }
+}
+
+/* Estilo para o botão de voltar na página de agradecimento */
+.voltar {
+  background-color: white;
+  border: 2px solid #FF3CAC; /* Cor de contorno vibrante */
+  padding: 12px 30px;
+  font-size: 1.3em;
+  color: #FF3CAC; /* Cor do texto no botão */
+  margin: 20px;
+  cursor: pointer;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(255, 60, 172, 0.8); /* Sombras mais visíveis */
+  text-decoration: none; /* Remove underline */
+}
+
+.voltar:hover {
+  background-color: #FF3CAC;
+  color: white;
 }
