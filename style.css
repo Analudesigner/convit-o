@@ -10,15 +10,40 @@
 }
 
 body {
-  background: linear-gradient(45deg, #FF3CAC, #784BA0, #2B86C5); /* Cores mais alegres */
+  background: rgb(255, 0, 255); /* Cor inicial */
+  background: linear-gradient(45deg, rgb(255, 0, 255), rgb(0, 255, 255), rgb(255, 255, 0)); /* Gradiente abstrato */
   background-size: 400% 400%;
-  animation: gradientBackground 10s ease infinite;
+  animation: gradientBackground 10s ease infinite; /* Animação para a troca de cores */
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   color: white; /* Texto branco */
   overflow: hidden;
+}
+
+/* Definição da animação do fundo (gradiente dinâmico) */
+@keyframes gradientBackground {
+  0% {
+    background: rgb(255, 0, 255); /* Cor inicial */
+    background: linear-gradient(45deg, rgb(255, 0, 255), rgb(0, 255, 255), rgb(255, 255, 0));
+  }
+  25% {
+    background: rgb(255, 100, 255); /* Cor intermediária */
+    background: linear-gradient(45deg, rgb(255, 100, 255), rgb(100, 255, 255), rgb(255, 255, 100));
+  }
+  50% {
+    background: rgb(0, 255, 255); /* Cor intermediária */
+    background: linear-gradient(45deg, rgb(0, 255, 255), rgb(255, 0, 255), rgb(100, 255, 0));
+  }
+  75% {
+    background: rgb(255, 255, 0); /* Cor intermediária */
+    background: linear-gradient(45deg, rgb(255, 255, 0), rgb(0, 255, 255), rgb(255, 100, 255));
+  }
+  100% {
+    background: rgb(255, 0, 255); /* Cor final (volta ao início) */
+    background: linear-gradient(45deg, rgb(255, 0, 255), rgb(0, 255, 255), rgb(255, 255, 0));
+  }
 }
 
 .container {
@@ -122,7 +147,6 @@ body {
   cursor: pointer;
   border-radius: 15px;
   transition: all 0.3s ease;
-  box-shadow: 0 0 15px rgba(255, 60, 172, 0.8); /* Sombras mais visíveis */
   text-decoration: none; /* Remove underline */
 }
 
