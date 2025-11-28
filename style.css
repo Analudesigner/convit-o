@@ -91,8 +91,9 @@ body {
   display: none;
 }
 
-.fugir {
-  animation: fugir 0.5s ease-out infinite;
+/* Estilo para o botão "Não" quando está invisível */
+#nao {
+  transition: opacity 0.5s, visibility 0.5s; /* Anima a transição */
 }
 
 /* Animação de fuga do "Não" */
@@ -154,3 +155,16 @@ body {
   background-color: #FF3CAC;
   color: white;
 }
+
+/* Estilo para o botão "Não" enquanto está se movendo ou "fugindo" */
+.fugir {
+  animation: fugir 0.5s ease-out infinite;
+}
+
+/* Torna o botão "Não" invisível e impossível de clicar quando clicado */
+#nao {
+  pointer-events: none; /* Impede qualquer clique futuro */
+  opacity: 0;
+  visibility: hidden; /* Faz o botão desaparecer */
+}
+
