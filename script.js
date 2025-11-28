@@ -1,5 +1,4 @@
 // Função que faz o "Não" se mover para uma posição aleatória
-function moverNao// Função que faz o "Não" se mover para uma posição aleatória
 function moverNao() {
   const naoButton = document.getElementById("nao");
 
@@ -40,11 +39,10 @@ document.getElementById("sim").addEventListener("click", function() {
   setTimeout(function() {
     document.body.innerHTML = `
       <div class="container">
-        <h1 class="titulo">Ufa ainda bem que tu aceitou 💋</h1>
-        <p class="mensagem">Aguarde que logo nos vamos comer pizza de shawarma</p>
+        <h1 class="titulo">Muito obrigado! 🥳</h1>
+        <p class="mensagem">Aguarde que logo nos vemos na confraternização! 🎉</p>
         <a href="/" class="voltar">Voltar para a página inicial</a>
       </div>
     `;
   }, 1000); // Espera 1 segundo para mostrar a página de agradecimento
 });
-
