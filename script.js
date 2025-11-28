@@ -35,24 +35,17 @@ document.getElementById("nao").addEventListener("click", function() {
 
 // Quando o "Sim" for clicado, mostra a página de agradecimento
 document.getElementById("sim").addEventListener("click", function() {
-  // Redireciona para a página de agradecimento
-  setTimeout(function() {
-    document.body.innerHTML = `
-      <div class="container">
-        <h1 class="titulo">Ufa ainda bem que tu aceitou 💋</h1>
-        <p class="mensagem">Aguarde que logo nos vamos comer pizza de shawarma e batata <p>
-        <p>na casa da Kelyn (obs: ela me obrigou a escrever isso)</p>
-        <a href="#" class="voltar">Voltar para a página inicial</a>
-      </div>
-    `;
-    
+  // Esconde a página inicial e mostra a página de agradecimento
+  document.getElementById("pagina-inicial").classList.add("escondido");
+  document.getElementById("pagina-agradecimento").classList.remove("escondido");
+});
+
 // Ação ao clicar no botão "Voltar"
 document.getElementById("voltar").addEventListener("click", function() {
   // Volta para a página inicial
   document.getElementById("pagina-agradecimento").classList.add("escondido");
   document.getElementById("pagina-inicial").classList.remove("escondido");
 });
-
 
 // Função para gerar corações brancos que sobem pela tela
 function gerarCoracoes() {
