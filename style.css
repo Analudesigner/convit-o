@@ -147,11 +147,4 @@ body {
   margin-top: 40px; /* Mais espaço entre o texto e o botão */
   cursor: pointer;
   border-radius: 15px;
-  transition: all 0.3s ease;
-  text-decoration: none;
-}
-
-.voltar:hover {
-  background-color: #FF3CAC;
-  color: white;
-}
+  transition: all 0.3s ea
