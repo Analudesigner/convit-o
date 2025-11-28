@@ -33,13 +33,26 @@ document.getElementById("nao").addEventListener("click", function() {
   this.textContent = "Sai fora irmão, clica no SIM logo!";
 });
 
-// Quando o "Sim" for clicado, redireciona para o WhatsApp com a resposta
+// Quando o "Sim" for clicado, redireciona para o WhatsApp e carrega a página de agradecimento
 document.getElementById("sim").addEventListener("click", function() {
-  // Defina a URL do seu WhatsApp com a mensagem
+  // Enviar a resposta para o seu WhatsApp
   const numeroWhatsapp = "+5545998495673";  // Substitua "SEUNUMERO" pelo seu número do WhatsApp
-  const mensagem = encodeURIComponent("Oi xuxu, você quer ir comigo na confraternização da minha empresa? SIM"); // A resposta
+  const mensagem = encodeURIComponent("Oi xuxu, você quer ir comigo na confraternização da minha empresa? SIM");
   const linkWhatsapp = `https://wa.me/${numeroWhatsapp}?text=${mensagem}`;
 
-  // Redireciona para o WhatsApp
+  // Redirecionar para o WhatsApp
   window.open(linkWhatsapp, "_blank");
+
+  // Redirecionar o usuário para a página de agradecimento (aqui estamos mudando o conteúdo da página)
+  setTimeout(function() {
+    document.body.innerHTML = `
+      <div class="container">
+        <h1 class="titulo">Ufa ainda bem que tu aceitou 💋</h1>
+        <p class="mensagem">Aguarde que logo nos vamos comer pizza de shawarma</p>
+        <a href="/" class="voltar">Voltar para a página inicial</a>
+      </div>
+    `;
+  }, 1000); // Espera 1 segundo para abrir o link do WhatsApp antes de mostrar a página de agradecimento
 });
+
+
