@@ -39,10 +39,30 @@ document.getElementById("sim").addEventListener("click", function() {
   setTimeout(function() {
     document.body.innerHTML = `
       <div class="container">
-        <h1 class="titulo">Muito obrigado! 🥳</h1>
-        <p class="mensagem">Aguarde que logo nos vemos na confraternização! 🎉</p>
+        <h1 class="titulo">Ufa ainda bem que tu aceitou 💋</h1>
+        <p class="mensagem">Aguarde que logo nos vamos comer pizza de shawarma</p>
         <a href="/" class="voltar">Voltar para a página inicial</a>
       </div>
     `;
   }, 1000); // Espera 1 segundo para mostrar a página de agradecimento
 });
+
+// Função para gerar corações brancos que sobem pela tela
+function gerarCoracoes() {
+  for (let i = 0; i < 50; i++) {
+    let coracao = document.createElement("span");
+    coracao.classList.add("coracao");
+    coracao.textContent = "💖"; // Emoji do coração
+
+    // Posições aleatórias para os corações
+    coracao.style.left = Math.random() * window.innerWidth + "px";
+    coracao.style.animationDuration = Math.random() * 4 + 3 + "s"; // Durabilidade de cada animação
+
+    document.body.appendChild(coracao);
+  }
+}
+
+// Chama a função para gerar os corações assim que a página carregar
+window.onload = function() {
+  gerarCoracoes();
+};
