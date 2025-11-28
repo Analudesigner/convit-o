@@ -1,20 +1,23 @@
+/* Adicionando fonte Poppins do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
 /* Estilo geral */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif; /* Fonte Poppins */
 }
 
 body {
-  background: linear-gradient(45deg, #ff007f, #00ffcc, #ff00ff, #ff7f00);
+  background: linear-gradient(45deg, #FF3CAC, #784BA0, #2B86C5); /* Cores mais alegres */
   background-size: 400% 400%;
   animation: gradientBackground 10s ease infinite;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  color: white;
+  color: white; /* Texto branco */
   overflow: hidden;
 }
 
@@ -24,38 +27,39 @@ body {
 }
 
 .titulo {
-  font-size: 3em;
+  font-size: 4em; /* Tamanho maior para o título */
+  font-weight: 600;
   color: white;
 }
 
 .mensagem {
-  font-size: 1.5em;
+  font-size: 1.8em; /* Um pouco maior */
   margin: 20px 0;
-  color: #450370;
+  color: white;
 }
 
 .botao {
   background-color: white;
-  border: 2px solid #ffffff;
-  padding: 10px 20px;
-  font-size: 1.2em;
-  color: #ffffff;
-  margin: 10px;
+  border: 2px solid #FF3CAC; /* Cor de contorno vibrante */
+  padding: 12px 30px;
+  font-size: 1.3em;
+  color: #FF3CAC; /* Cor do texto no botão */
+  margin: 15px;
   cursor: pointer;
-  border-radius: 10px;
-  transition: all 0.3s;
-  box-shadow: 0 0 10px #ffffff;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(255, 60, 172, 0.8); /* Sombras mais visíveis */
 }
 
 .botao:hover {
-  background-color: #ffffff;
+  background-color: #FF3CAC;
   color: white;
 }
 
 .resposta {
-  font-size: 1.2em;
+  font-size: 1.5em;
   margin-top: 30px;
-  color: #ffffff;
+  color: #FF9900; /* Cor vibrante para a resposta */
 }
 
 .escondido {
