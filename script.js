@@ -12,9 +12,16 @@ function moverNao() {
   naoButton.style.top = randomY + "px";
 }
 
-// Quando o mouse passa por cima do "Não", o botão começa a "fugir"
+// Quando o mouse (ou toque) passa por cima do "Não", o botão começa a "fugir"
 document.getElementById("nao").addEventListener("mouseover", function() {
   // Continuar movendo o botão "Não" a cada 100ms
+  this.classList.add("fugir");
+  this.fugindo = setInterval(moverNao, 100); // O movimento acontece a cada 100ms
+});
+
+// Adicionar suporte para dispositivos móveis (toque)
+document.getElementById("nao").addEventListener("touchstart", function() {
+  // Continuar movendo o botão "Não" a cada 100ms no toque
   this.classList.add("fugir");
   this.fugindo = setInterval(moverNao, 100); // O movimento acontece a cada 100ms
 });
@@ -66,3 +73,16 @@ function gerarCoracoes() {
 window.onload = function() {
   gerarCoracoes();
 };
+
+// Ajustes no tamanho das animações e no layout para dispositivos móveis
+window.addEventListener('resize', function() {
+  const naoButton = document.getElementById("nao");
+  const coracoes = document.querySelectorAll(".coracao");
+
+  // Ajustar animações de corações e botão caso a tela seja redimensionada
+  coracoes.forEach(coracao => {
+    coracao.style.left = Math.random() * window.innerWidth + "px";
+    coracao.style.animationDuration = Math.random() * 4 + 3 + "s";
+  });
+});
+
